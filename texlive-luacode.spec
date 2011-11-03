@@ -1,3 +1,9 @@
+# revision 22605
+# category Package
+# catalog-ctan /macros/luatex/latex/luacode
+# catalog-date 2011-05-24 21:39:05 +0200
+# catalog-license lppl1.3
+# catalog-version 1.0
 Name:		texlive-luacode
 Version:	1.0
 Release:	1
@@ -47,6 +53,7 @@ and the luacode(*) environments to help with these problems.
 #- source
 %doc %{_texmfdistdir}/source/lualatex/luacode/Makefile
 %doc %{_texmfdistdir}/source/lualatex/luacode/luacode.dtx
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -57,3 +64,5 @@ and the luacode(*) environments to help with these problems.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
