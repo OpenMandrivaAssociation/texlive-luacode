@@ -1,4 +1,4 @@
-# revision 24969
+# revision 25193
 # category Package
 # catalog-ctan /macros/luatex/latex/luacode
 # catalog-date 2011-12-29 11:37:48 +0100
@@ -6,7 +6,7 @@
 # catalog-version 1.2
 Name:		texlive-luacode
 Version:	1.2
-Release:	1
+Release:	2
 Summary:	Helper for executing lua code from within TeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/luatex/latex/luacode
