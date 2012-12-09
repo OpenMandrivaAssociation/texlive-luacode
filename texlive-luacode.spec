@@ -53,3 +53,25 @@ and the luacode(*) environments to help with these problems.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Tue Jan 31 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.2-2
++ Revision: 770208
+- Update to latest upstream package
+
+* Mon Jan 09 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.2-1
++ Revision: 758937
+- Update to latest upstream release
+
+* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.0-2
++ Revision: 753581
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.0-1
++ Revision: 718920
+- texlive-luacode
+- texlive-luacode
+- texlive-luacode
+- texlive-luacode
+
