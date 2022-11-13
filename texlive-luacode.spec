@@ -1,19 +1,13 @@
-# revision 25193
-# category Package
-# catalog-ctan /macros/luatex/latex/luacode
-# catalog-date 2011-12-29 11:37:48 +0100
-# catalog-license lppl1.3
-# catalog-version 1.2
 Name:		texlive-luacode
-Version:	1.2a
-Release:	2
+Version:	25193
+Release:	1
 Summary:	Helper for executing lua code from within TeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/luatex/latex/luacode
 License:	LPPL1.3
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/luacode.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/luacode.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/luacode.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/luacode.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/luacode.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/luacode.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -27,12 +21,12 @@ the way you expect. The package provides the \luaexec command
 and the luacode(*) environments to help with these problems.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -46,32 +40,11 @@ and the luacode(*) environments to help with these problems.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Tue Jan 31 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.2-2
-+ Revision: 770208
-- Update to latest upstream package
-
-* Mon Jan 09 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.2-1
-+ Revision: 758937
-- Update to latest upstream release
-
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.0-2
-+ Revision: 753581
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.0-1
-+ Revision: 718920
-- texlive-luacode
-- texlive-luacode
-- texlive-luacode
-- texlive-luacode
-
