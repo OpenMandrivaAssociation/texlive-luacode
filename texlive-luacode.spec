@@ -3,7 +3,7 @@ Version:	25193
 Release:	2
 Summary:	Helper for executing lua code from within TeX
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/luatex/latex/luacode
+URL:		https://www.ctan.org/tex-archive/macros/luatex/latex/luacode
 License:	LPPL1.3
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/luacode.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/luacode.doc.r%{version}.tar.xz
